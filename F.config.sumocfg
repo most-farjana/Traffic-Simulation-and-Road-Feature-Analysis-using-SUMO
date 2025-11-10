@@ -1,0 +1,24 @@
+<configuration>
+
+<input>
+	<net-file value="Fmap.net.xml"/>
+	<route-files value="Froutes.rou.xml"/>
+</input>
+
+<output>
+	<queue-output
+		value="D:\My Project\F\Fqueue.xml"/>
+	<summary-output
+		value="D:\My Project\F\Foutput.xml"/>
+	<emission-output
+		value= "D:\My Project\F\Femission.xml"/>
+	<collision-output
+		value= "D:\My Project\F\Fcollision.xml"/>
+</output>
+
+<time>
+	<begin value="0"/>
+	<end value="10000"/>
+</time>
+
+</configuration>

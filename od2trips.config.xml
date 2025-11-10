@@ -1,0 +1,12 @@
+<configuration>
+	<input>
+		<taz-files value="Ftaz.taz.xml"/>
+		<od-matrix-files value="F2OD.od"/>
+	</input>
+	
+		<!--
+	<output>
+		<output-file value="Fodtrips.odtrips.xml"/>
+	<output>
+		-->
+</configuration>

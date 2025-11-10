@@ -1,0 +1,164 @@
+<routes>
+    <!-- Vehicle Types -->
+    <vType id="car" accel="2.5" decel="4.5" length="5.0" maxSpeed="50" sigma="0.1" color="255,255,255"/>
+    <vType id="truck" accel="1.0" decel="2.0" length="12.0" maxSpeed="30" sigma="0.1" color="255,105,180"/>
+    <vType id="autonomous" accel="2.0" decel="4.0" length="4.5" maxSpeed="55" sigma="0.05" color="1,0,0"/>
+    <vType id="bus" accel="1.2" decel="2.5" length="12.0" maxSpeed="25" sigma="0.1" color="1,1,0"/>
+    <vType id="autorickshaw" accel="1.5" decel="3.0" length="3.0" maxSpeed="35" sigma="0.1" color="0.82,0.70,0.55"/>
+    <vType id="pedestrian" vClass="pedestrian" speedFactor="1.0" color="1,0.6,0.6"/>
+
+    <!-- Routes from OD pairs -->
+    <route id="r_2_11" edges="277166430 336600790#1"/>
+    <route id="r_2_14" edges="277166430 -336600790#0"/>
+    <route id="r_12_1" edges="-336600790#1 -277166430"/>
+    <route id="r_12_14" edges="-336600790#1 -336600790#0"/>
+    <route id="r_13_1" edges="336600790#0 -277166430"/>
+    <route id="r_13_11" edges="336600790#0 336600790#1"/>
+    <route id="r_11_7" edges="336600790#1 336600790#2"/>
+    <route id="r_11_9" edges="336600790#1 602862812#0"/>
+    <route id="r_8_12" edges="-336600790#2 -336600790#1"/>
+    <route id="r_8_9" edges="-336600790#2 602862812#0"/>
+    <route id="r_10_7" edges="-602862812#0 336600790#2"/>
+    <route id="r_10_12" edges="-602862812#0 -336600790#1"/>
+    <route id="r_4_5" edges="533904625 336600790#3"/>
+    <route id="r_4_8" edges="533904625 -336600790#2"/>
+    <route id="r_6_3" edges="-336600790#3 -533904625"/>
+    <route id="r_6_8" edges="-336600790#3 -336600790#2"/>
+    <route id="r_7_5" edges="336600790#2 336600790#3"/>
+    <route id="r_7_3" edges="336600790#2 -533904625"/>
+        <!-- Pedestrian routes -->
+    <route id="ped1_crossing" edges="602862812#0"/>
+    <route id="ped2_crossing" edges="-602862812#0"/>
+
+    <!-- Flows for each route with all 5 vehicle types -->
+    
+    <!-- 2->11 -->
+    <flow id="flow_2_11_car" type="car" route="r_2_11" begin="0" end="2700" number="200"/>
+    <flow id="flow_2_11_truck" type="truck" route="r_2_11" begin="0" end="2700" number="50"/>
+    <flow id="flow_2_11_autonomous" type="autonomous" route="r_2_11" begin="0" end="2700" number="50"/>
+    <flow id="flow_2_11_bus" type="bus" route="r_2_11" begin="0" end="2700" number="10"/>
+    <flow id="flow_2_11_autorickshaw" type="autorickshaw" route="r_2_11" begin="0" end="2700" number="40"/>
+
+    <!-- 2->14 -->
+    <flow id="flow_2_14_car" type="car" route="r_2_14" begin="0" end="2700" number="150"/>
+    <flow id="flow_2_14_truck" type="truck" route="r_2_14" begin="0" end="2700" number="50"/>
+    <flow id="flow_2_14_autonomous" type="autonomous" route="r_2_14" begin="0" end="2700" number="30"/>
+    <flow id="flow_2_14_bus" type="bus" route="r_2_14" begin="0" end="2700" number="10"/>
+    <flow id="flow_2_14_autorickshaw" type="autorickshaw" route="r_2_14" begin="0" end="2700" number="10"/>
+
+    <!-- 12->1 -->
+    <flow id="flow_12_1_car" type="car" route="r_12_1" begin="0" end="2700" number="200"/>
+    <flow id="flow_12_1_truck" type="truck" route="r_12_1" begin="0" end="2700" number="100"/>
+    <flow id="flow_12_1_autonomous" type="autonomous" route="r_12_1" begin="0" end="2700" number="30"/>
+    <flow id="flow_12_1_bus" type="bus" route="r_12_1" begin="0" end="2700" number="10"/>
+    <flow id="flow_12_1_autorickshaw" type="autorickshaw" route="r_12_1" begin="0" end="2700" number="10"/>
+
+    <!-- 12->14 -->
+    <flow id="flow_12_14_car" type="car" route="r_12_14" begin="0" end="2700" number="150"/>
+    <flow id="flow_12_14_truck" type="truck" route="r_12_14" begin="0" end="2700" number="50"/>
+    <flow id="flow_12_14_autonomous" type="autonomous" route="r_12_14" begin="0" end="2700" number="30"/>
+    <flow id="flow_12_14_bus" type="bus" route="r_12_14" begin="0" end="2700" number="10"/>
+    <flow id="flow_12_14_autorickshaw" type="autorickshaw" route="r_12_14" begin="0" end="2700" number="10"/>
+
+    <!-- 13->1 -->
+    <flow id="flow_13_1_car" type="car" route="r_13_1" begin="0" end="2700" number="200"/>
+    <flow id="flow_13_1_truck" type="truck" route="r_13_1" begin="0" end="2700" number="50"/>
+    <flow id="flow_13_1_autonomous" type="autonomous" route="r_13_1" begin="0" end="2700" number="150"/>
+    <flow id="flow_13_1_bus" type="bus" route="r_13_1" begin="0" end="2700" number="10"/>
+    <flow id="flow_13_1_autorickshaw" type="autorickshaw" route="r_13_1" begin="0" end="2700" number="10"/>
+
+    <!-- 13->11 -->
+    <flow id="flow_13_11_car" type="car" route="r_13_11" begin="0" end="2700" number="100"/>
+    <flow id="flow_13_11_truck" type="truck" route="r_13_11" begin="0" end="2700" number="20"/>
+    <flow id="flow_13_11_autonomous" type="autonomous" route="r_13_11" begin="0" end="2700" number="150"/>
+    <flow id="flow_13_11_bus" type="bus" route="r_13_11" begin="0" end="2700" number="10"/>
+    <flow id="flow_13_11_autorickshaw" type="autorickshaw" route="r_13_11" begin="0" end="2700" number="10"/>
+
+    <!-- 11->7 -->
+    <flow id="flow_11_7_car" type="car" route="r_11_7" begin="0" end="2700" number="150"/>
+    <flow id="flow_11_7_truck" type="truck" route="r_11_7" begin="0" end="2700" number="50"/>
+    <flow id="flow_11_7_autonomous" type="autonomous" route="r_11_7" begin="0" end="2700" number="30"/>
+    <flow id="flow_11_7_bus" type="bus" route="r_11_7" begin="0" end="2700" number="10"/>
+    <flow id="flow_11_7_autorickshaw" type="autorickshaw" route="r_11_7" begin="0" end="2700" number="10"/>
+
+    <!-- 11->9 -->
+    <flow id="flow_11_9_car" type="car" route="r_11_9" begin="0" end="2700" number="150"/>
+    <flow id="flow_11_9_truck" type="truck" route="r_11_9" begin="0" end="2700" number="50"/>
+    <flow id="flow_11_9_autonomous" type="autonomous" route="r_11_9" begin="0" end="2700" number="30"/>
+    <flow id="flow_11_9_bus" type="bus" route="r_11_9" begin="0" end="2700" number="10"/>
+    <flow id="flow_11_9_autorickshaw" type="autorickshaw" route="r_11_9" begin="0" end="2700" number="10"/>
+
+    <!-- 8->12 -->
+    <flow id="flow_8_12_car" type="car" route="r_8_12" begin="0" end="2700" number="150"/>
+    <flow id="flow_8_12_truck" type="truck" route="r_8_12" begin="0" end="2700" number="50"/>
+    <flow id="flow_8_12_autonomous" type="autonomous" route="r_8_12" begin="0" end="2700" number="30"/>
+    <flow id="flow_8_12_bus" type="bus" route="r_8_12" begin="0" end="2700" number="10"/>
+    <flow id="flow_8_12_autorickshaw" type="autorickshaw" route="r_8_12" begin="0" end="2700" number="10"/>
+
+    <!-- 8->9 -->
+    <flow id="flow_8_9_car" type="car" route="r_8_9" begin="0" end="2700" number="150"/>
+    <flow id="flow_8_9_truck" type="truck" route="r_8_9" begin="0" end="2700" number="50"/>
+    <flow id="flow_8_9_autonomous" type="autonomous" route="r_8_9" begin="0" end="2700" number="30"/>
+    <flow id="flow_8_9_bus" type="bus" route="r_8_9" begin="0" end="2700" number="10"/>
+    <flow id="flow_8_9_autorickshaw" type="autorickshaw" route="r_8_9" begin="0" end="2700" number="10"/>
+
+    <!-- 10->7 -->
+    <flow id="flow_10_7_car" type="car" route="r_10_7" begin="0" end="2700" number="200"/>
+    <flow id="flow_10_7_truck" type="truck" route="r_10_7" begin="0" end="2700" number="50"/>
+    <flow id="flow_10_7_autonomous" type="autonomous" route="r_10_7" begin="0" end="2700" number="50"/>
+    <flow id="flow_10_7_bus" type="bus" route="r_10_7" begin="0" end="2700" number="10"/>
+    <flow id="flow_10_7_autorickshaw" type="autorickshaw" route="r_10_7" begin="0" end="2700" number="10"/>
+
+    <!-- 10->12 -->
+    <flow id="flow_10_12_car" type="car" route="r_10_12" begin="0" end="2700" number="200"/>
+    <flow id="flow_10_12_truck" type="truck" route="r_10_12" begin="0" end="2700" number="50"/>
+    <flow id="flow_10_12_autonomous" type="autonomous" route="r_10_12" begin="0" end="2700" number="50"/>
+    <flow id="flow_10_12_bus" type="bus" route="r_10_12" begin="0" end="2700" number="10"/>
+    <flow id="flow_10_12_autorickshaw" type="autorickshaw" route="r_10_12" begin="0" end="2700" number="10"/>
+
+    <!-- 4->5 -->
+    <flow id="flow_4_5_car" type="car" route="r_4_5" begin="0" end="2700" number="150"/>
+    <flow id="flow_4_5_truck" type="truck" route="r_4_5" begin="0" end="2700" number="50"/>
+    <flow id="flow_4_5_autonomous" type="autonomous" route="r_4_5" begin="0" end="2700" number="120"/>
+    <flow id="flow_4_5_bus" type="bus" route="r_4_5" begin="0" end="2700" number="10"/>
+    <flow id="flow_4_5_autorickshaw" type="autorickshaw" route="r_4_5" begin="0" end="2700" number="20"/>
+
+    <!-- 4->8 -->
+    <flow id="flow_4_8_car" type="car" route="r_4_8" begin="0" end="2700" number="150"/>
+    <flow id="flow_4_8_truck" type="truck" route="r_4_8" begin="0" end="2700" number="50"/>
+    <flow id="flow_4_8_autonomous" type="autonomous" route="r_4_8" begin="0" end="2700" number="30"/>
+    <flow id="flow_4_8_bus" type="bus" route="r_4_8" begin="0" end="2700" number="10"/>
+    <flow id="flow_4_8_autorickshaw" type="autorickshaw" route="r_4_8" begin="0" end="2700" number="10"/>
+
+    <!-- 6->3 -->
+    <flow id="flow_6_3_car" type="car" route="r_6_3" begin="0" end="2700" number="200"/>
+    <flow id="flow_6_3_truck" type="truck" route="r_6_3" begin="0" end="2700" number="50"/>
+    <flow id="flow_6_3_autonomous" type="autonomous" route="r_6_3" begin="0" end="2700" number="100"/>
+    <flow id="flow_6_3_bus" type="bus" route="r_6_3" begin="0" end="2700" number="10"/>
+    <flow id="flow_6_3_autorickshaw" type="autorickshaw" route="r_6_3" begin="0" end="2700" number="10"/>
+
+    <!-- 6->8 -->
+    <flow id="flow_6_8_car" type="car" route="r_6_8" begin="0" end="2700" number="150"/>
+    <flow id="flow_6_8_truck" type="truck" route="r_6_8" begin="0" end="2700" number="50"/>
+    <flow id="flow_6_8_autonomous" type="autonomous" route="r_6_8" begin="0" end="2700" number="30"/>
+    <flow id="flow_6_8_bus" type="bus" route="r_6_8" begin="0" end="2700" number="10"/>
+    <flow id="flow_6_8_autorickshaw" type="autorickshaw" route="r_6_8" begin="0" end="2700" number="10"/>
+
+    <!-- 7->5 -->
+    <flow id="flow_7_5_car" type="car" route="r_7_5" begin="0" end="2700" number="150"/>
+    <flow id="flow_7_5_truck" type="truck" route="r_7_5" begin="0" end="2700" number="150"/>
+    <flow id="flow_7_5_autonomous" type="autonomous" route="r_7_5" begin="0" end="2700" number="30"/>
+    <flow id="flow_7_5_bus" type="bus" route="r_7_5" begin="0" end="2700" number="10"/>
+    <flow id="flow_7_5_autorickshaw" type="autorickshaw" route="r_7_5" begin="0" end="2700" number="10"/>
+
+    <!-- 7->3 -->
+    <flow id="flow_7_3_car" type="car" route="r_7_3" begin="0" end="2700" number="100"/>
+    <flow id="flow_7_3_truck" type="truck" route="r_7_3" begin="0" end="2700" number="100"/>
+    <flow id="flow_7_3_autonomous" type="autonomous" route="r_7_3" begin="0" end="2700" number="50"/>
+    <flow id="flow_7_3_bus" type="bus" route="r_7_3" begin="0" end="2700" number="10"/>
+    <flow id="flow_7_3_autorickshaw" type="autorickshaw" route="r_7_3" begin="0" end="2700" number="10"/>
+        <!-- Pedestrian flow -->
+    <flow id="ped_flow_1" type="pedestrian" route="ped1_crossing" begin="0" end="1800" number="100"/>
+    <flow id="ped_flow_2" type="pedestrian" route="ped2_crossing" begin="0" end="1800" number="50"/>
+
+</routes>
